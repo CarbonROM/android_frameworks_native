@@ -147,6 +147,9 @@ struct InputReaderConfiguration {
         // Volume keys rotation option changed.
         CHANGE_VOLUME_KEYS_ROTATION = 1 << 7,
 
+        // Swap keys changed.
+        CHANGE_SWAP_KEYS = 1 << 8,
+
         // All devices must be reopened.
         CHANGE_MUST_REOPEN = 1 << 31,
     };
@@ -238,6 +241,9 @@ struct InputReaderConfiguration {
     // 0 - disabled, 1 - phone or hybrid rotation mode, 2 - tablet rotation mode
     int volumeKeysRotationMode;
 
+    // Swap back with recents button
+    bool swapKeys;
+
     InputReaderConfiguration() :
             virtualKeyQuietTime(0),
             pointerVelocityControlParameters(1.0f, 500.0f, 3000.0f, 3.0f),
@@ -255,7 +261,8 @@ struct InputReaderConfiguration {
             pointerGestureMovementSpeedRatio(0.8f),
             pointerGestureZoomSpeedRatio(0.3f),
             showTouches(false),
-            volumeKeysRotationMode(0) { }
+            volumeKeysRotationMode(0),
+            swapKeys(false) { }
 
     bool getDisplayInfo(bool external, DisplayViewport* outViewport) const;
     void setDisplayInfo(bool external, const DisplayViewport& viewport);
@@ -1145,6 +1152,8 @@ private:
     int32_t mRotationMapOffset; // determines if and how volume keys rotate
     int32_t mOrientation; // orientation for dpad and volume keys
 
+    bool mSwapKeys; // swap back with recents button
+
     Vector<KeyDown> mKeyDowns; // keys that are down
     int32_t mMetaState;
     nsecs_t mDownTime; // time of most recent key down
@@ -1174,6 +1183,8 @@ private:
     void processKey(nsecs_t when, bool down, int32_t scanCode, int32_t usageCode);
 
     bool updateMetaStateIfNeeded(int32_t keyCode, bool down);
+
+    int getAdjustedKeyCode(int keyCode);
 
     ssize_t findKeyDown(int32_t scanCode);
 
