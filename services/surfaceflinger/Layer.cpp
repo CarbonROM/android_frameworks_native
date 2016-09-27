@@ -2237,7 +2237,7 @@ void Layer::dump(String8& result, Colorizer& colorizer) const
             mQueuedFrames, mRefreshPending);
 
     if (mSurfaceFlingerConsumer != 0) {
-        mSurfaceFlingerConsumer->dump(result, "            ");
+        mSurfaceFlingerConsumer->dumpState(result, "            ");
     }
 }
 
