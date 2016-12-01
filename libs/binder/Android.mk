@@ -68,6 +68,7 @@ LOCAL_MODULE := libbinder
 LOCAL_SHARED_LIBRARIES += liblog libcutils libutils
 
 LOCAL_CLANG := true
+LOCAL_SDCLANG_LTO := true
 LOCAL_SANITIZE := integer
 LOCAL_SRC_FILES := $(sources)
 LOCAL_CFLAGS += $(local_vm_binder_flags)
@@ -90,6 +91,7 @@ endif
 LOCAL_MODULE := libbinder
 LOCAL_STATIC_LIBRARIES += libutils
 LOCAL_CFLAGS += $(local_vm_binder_flags)
+LOCAL_SDCLANG_LTO := true
 LOCAL_SRC_FILES := $(sources)
 ifeq ($(BOARD_NEEDS_MEMORYHEAPPMEM),true)
 LOCAL_C_INCLUDES += \
