@@ -41,7 +41,9 @@ int main(int, char**) {
     // instantiate surfaceflinger
     sp<SurfaceFlinger> flinger = new SurfaceFlinger();
 
-    setpriority(PRIO_PROCESS, 0, PRIORITY_REALTIME);
+    setpriority(PRIO_PROCESS, 0, PRIORITY_URGENT_DISPLAY);
+
+    set_sched_policy(0, SP_FOREGROUND);
 
 #ifdef ENABLE_CPUSETS
     // Put most SurfaceFlinger threads in the system-background cpuset
