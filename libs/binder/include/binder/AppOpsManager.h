@@ -93,6 +93,17 @@ public:
         OP_USE_FINGERPRINT = 55,
         OP_BODY_SENSORS = 56,
         OP_AUDIO_ACCESSIBILITY_VOLUME = 64,
+        OP_READ_PHONE_NUMBERS = 65,
+        OP_REQUEST_INSTALL_PACKAGES = 66,
+        OP_PICTURE_IN_PICTURE = 67,
+        OP_INSTANT_APP_START_FOREGROUND = 68,
+        OP_ANSWER_PHONE_CALLS = 69,
+        OP_CHANGE_WIFI_STATE = 70,
+        OP_BLUETOOTH_CHANGE = 71,
+        OP_BOOT_COMPLETED = 72,
+        OP_NFC_CHANGE = 73,
+        OP_DATA_CONNECT_CHANGE = 74,
+        OP_SU = 75,
     };
 
     AppOpsManager();
