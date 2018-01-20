@@ -105,7 +105,8 @@ LOCAL_EXPORT_SHARED_LIBRARY_HEADERS := \
     libhwbinder
 
 LOCAL_CFLAGS += -Wall -Werror -Wunused -Wunreachable-code -std=c++1z
-
+LOCAL_CFLAGS += -flto=thin -fuse-ld=gold
+LOCAL_LDFLAGS += -flto=thin -fuse-ld=gold
 include $(BUILD_SHARED_LIBRARY)
 
 ###############################################################
