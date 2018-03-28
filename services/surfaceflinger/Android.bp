@@ -51,6 +51,7 @@ cc_defaults {
         "libui",
         "libutils",
         "libvulkan",
+        "libqdMetaData.system",
     ],
     static_libs: [
         "libserviceutils",
@@ -131,6 +132,10 @@ filegroup {
         "SurfaceTracing.cpp",
         "TimeStats/TimeStats.cpp",
         "Transform.cpp",
+        "DisplayUtils.cpp",
+        "ExSurfaceFlinger/ExSurfaceFlinger.cpp",
+        "ExSurfaceFlinger/ExVirtualDisplaySurface.cpp",
+        "ExSurfaceFlinger/ExBufferLayer.cpp"
     ],
 }
 
@@ -148,6 +153,9 @@ cc_library_shared {
     include_dirs: [
         "frameworks/native/vulkan/vkjson",
         "frameworks/native/vulkan/include",
+        "hardware/qcom/display/include",
+        "hardware/qcom/display/gralloc",
+        "hardware/qcom/display/libqdutils",
     ],
     cppflags: [
         "-fwhole-program-vtables", // requires ThinLTO
@@ -164,6 +172,10 @@ cc_binary {
     srcs: ["main_surfaceflinger.cpp"],
     whole_static_libs: [
         "libsigchain",
+    ],
+    include_dirs: [
+        "hardware/qcom/display/include",
+        "hardware/qcom/display/gralloc",
     ],
     shared_libs: [
         "android.frameworks.displayservice@1.0",
