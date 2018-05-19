@@ -203,8 +203,7 @@ SurfaceFlinger::SurfaceFlinger()
     useVrFlinger = getBool< ISurfaceFlingerConfigs,
             &ISurfaceFlingerConfigs::useVrFlinger>(false);
 
-    maxFrameBufferAcquiredBuffers = getInt64< ISurfaceFlingerConfigs,
-            &ISurfaceFlingerConfigs::maxFrameBufferAcquiredBuffers>(2);
+    maxFrameBufferAcquiredBuffers = 3;
 
     hasWideColorDisplay =
             getBool<ISurfaceFlingerConfigs, &ISurfaceFlingerConfigs::hasWideColorDisplay>(false);

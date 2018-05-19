@@ -175,8 +175,7 @@ SurfaceFlinger::SurfaceFlinger()
     useHwcForRgbToYuv = getBool< ISurfaceFlingerConfigs,
             &ISurfaceFlingerConfigs::useHwcForRGBtoYUV>(false);
 
-    maxFrameBufferAcquiredBuffers = getInt64< ISurfaceFlingerConfigs,
-            &ISurfaceFlingerConfigs::maxFrameBufferAcquiredBuffers>(2);
+    maxFrameBufferAcquiredBuffers = 3;
 
     mPrimaryDispSync.init(hasSyncFramework, dispSyncPresentTimeOffset);
 

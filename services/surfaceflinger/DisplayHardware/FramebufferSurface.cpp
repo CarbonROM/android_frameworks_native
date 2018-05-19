@@ -84,8 +84,7 @@ FramebufferSurface::FramebufferSurface(HWComposer& hwc, int disp,
     mConsumer->setDefaultBufferFormat(mHwc.getFormat(disp));
     mConsumer->setDefaultBufferSize(mHwc.getWidth(disp), mHwc.getHeight(disp));
 #endif
-    mConsumer->setMaxAcquiredBufferCount(
-            SurfaceFlinger::maxFrameBufferAcquiredBuffers - 1);
+    mConsumer->setMaxAcquiredBufferCount(3);
 }
 
 status_t FramebufferSurface::beginFrame(bool /*mustRecompose*/) {
