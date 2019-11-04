@@ -47,6 +47,20 @@ cc_library_shared {
     ],
 
     export_include_dirs: ["."],
+
+    product_variables: {
+        carbon: {
+            uses_nvidia_enhancements: {
+                srcs: ["InputHook.cpp"],
+                shared_libs: [
+                    "libhidlbase",
+                    "libhidltransport",
+                    "vendor.nvidia.hardware.shieldtech.inputflinger@2.0",
+                ],
+                cppflags: ["-DNV_ANDROID_FRAMEWORK_ENHANCEMENTS"],
+            },
+        },
+    },
 }
 
 subdirs = [
