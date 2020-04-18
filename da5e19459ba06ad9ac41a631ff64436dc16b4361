@@ -1,4 +1,68 @@
 {
   "pushCert": "certificate version 0.1\npusher 1A84DE06ABA9633BF58FF3F7411536884877F74D 1587172087 -0300\npushee ssh://review.carbonrom.org:29418/CarbonROM/android_frameworks_native\nnonce 1587172087-280BD93F15F5BAE0D485B1DB679459BDC6D28F6C\n\n0000000000000000000000000000000000000000 da5e19459ba06ad9ac41a631ff64436dc16b4361 refs/for/cr-7.0\n-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEGoTeBqupYzv1j/P3QRU2iEh3900FAl6aUvcACgkQQRU2iEh3\n902sIw/9HDG938F6SamM0fiKUhTvqKfzCtz+IdcEHIM6n2C3hwxv3cMPpgyQZxkz\nML+8RpfrvAwTPo5OMi67p1b1s29FEX/0eiF8eZSWBP0kbBFWB+4r0D+Td6Tf1NUK\nfG2fO1okHUnNeL4RtdtqmxADmsLzMhcF8ugoAO2MNS0TX9B8CFXZSq+w0t+/VkcO\nmy9unBZL+0AXWtaBgQ0Sv9c+WsAQF3iKpuXdRckkWNYDWwAdxF56GmZcL4Zu5pNo\nLi2ko6P00RMvlHQlTMmHlsnU1G7XabomfijRaQRVyOoofZKq5o8EVQLcNOud0hXh\n+RiuJIwFVlVSKYdeJasebHYsDwr2RowRI8GmHlRbr6892ewURjcUkAsCrho4rN/B\n1xkZG2doz+Y0FkxapdJ65ZMe5q1DalwZYct/zqHtin6aWLseJeC4i4XnB0i2gGHd\nmcmF7Qc6adnxMYWiKFpNRopU6LQ6y5BfzhyYJp/JMckf9sWWIW9k3wCBCp1rCwse\nQfulBDZWmrttCpGN+40WbCG9fHQ7nlwoWPtNqspX5wNeUVeSEFO12UGehn/SFvr3\n+HOGmLHLSJk4fsbMSnx7IiGmfscA5Z8JKc8AlNba/Voa0aL06oB39POa0OHdEyrM\n8R0857Vzr63I+ZO/3KamxpwEOrIm44MQ47iFKVFtfQMD49p2efs\u003d\n\u003dzjYI\n-----END PGP SIGNATURE-----\n",
-  "comments": []
+  "comments": [
+    {
+      "key": {
+        "uuid": "647cb139_25cd6265",
+        "filename": "services/surfaceflinger/Client.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-04-18T02:35:46Z",
+      "side": 1,
+      "message": "Unnecessary new",
+      "range": {
+        "startLine": 160,
+        "startChar": 0,
+        "endLine": 204,
+        "endChar": 70
+      },
+      "revId": "da5e19459ba06ad9ac41a631ff64436dc16b4361",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9871874_f4eca1b5",
+        "filename": "services/surfaceflinger/SurfaceFlinger.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 3843,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-04-18T02:35:46Z",
+      "side": 1,
+      "message": "Also not an addition as direct result of change.",
+      "range": {
+        "startLine": 3825,
+        "startChar": 0,
+        "endLine": 3843,
+        "endChar": 1
+      },
+      "revId": "da5e19459ba06ad9ac41a631ff64436dc16b4361",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10ad90c4_c610471b",
+        "filename": "services/surfaceflinger/SurfaceFlinger.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-04-18T02:35:46Z",
+      "side": 1,
+      "message": "New, threw error:\nframeworks/native/services/surfaceflinger/SurfaceFlinger.h:353:55: error: use of undeclared identifier \u0027mPrimaryDisplayOrientation\u0027; did you mean \u0027primaryDisplayOrientation\u0027?",
+      "revId": "da5e19459ba06ad9ac41a631ff64436dc16b4361",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081",
+      "unresolved": true
+    }
+  ]
 }
