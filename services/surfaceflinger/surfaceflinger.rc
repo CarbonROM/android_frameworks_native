@@ -1,4 +1,5 @@
 service surfaceflinger /system/bin/surfaceflinger
+    interface aidl SurfaceFlinger
     class core animation
     user system
     group graphics drmrpc readproc
